@@ -48,5 +48,19 @@ public class WeeklySteps {
         }
         return builder.toString();
     }
-    public void addDailySteps(int Steps, LocalDate date)
+    public void addDailySteps(int Steps, LocalDate date) {
+        dailySteps.add(new Steps(Steps, date));
+    }
+    public List<Steps> getDailySteps() {
+        return dailySteps;
+    }
+    public void setDailySteps(List<Steps> dailySteps) {
+        this.dailySteps = dailySteps;
+    }
+    public DailyGoal getDailyGoal() {
+        return dailyGoal;
+    }
+    public void setDailyGoal(DailyGoal dailyGoal) {
+        this.dailyGoal = dailyGoal;
+    }
 }
