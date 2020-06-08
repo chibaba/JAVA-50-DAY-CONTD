@@ -63,4 +63,28 @@ public class WeeklySteps {
     public void setDailyGoal(DailyGoal dailyGoal) {
         this.dailyGoal = dailyGoal;
     }
+
+    public static void main(String[] args) {
+        DailyGoal dailyGoal = new DailyGoal(10000);
+        WeeklySteps weekly = new WeeklySteps();
+        weekly.setDailyGoal(dailyGoal);
+
+        int year = 2021;
+        int month = 1;
+        int day = 4;
+        weekly.addDailySteps(11543, LocalDate.of(year, month, day));
+        day++;
+        weekly.addDailySteps(12112, LocalDate.of(year, month, day));
+        day++;
+        weekly.addDailySteps(10005, LocalDate.of(year, month, day));
+        day++;
+        weekly.addDailySteps(200093, LocalDate.of(year, month, day));
+        day++;
+        weekly.addDailySteps(20045, LocalDate.of(year, month, day));
+        day++;
+        weekly.addDailySteps(54823,    LocalDate.of(year, month, day));
+        System.out.println(weekly.format());
+
+
+    }
 }
